@@ -3,22 +3,7 @@ package com.julianacano.springretoback.modelo;
 
 
 import java.util.UUID;
-/**{
-	"cliente": {
-		"cedula": "12345",
-		"direccion": "Carrera 11 # 14-08"
-	},
-	"pedidos": [
-		{
-			"productos": {
-				"codigo": "100",
-				"precio": "45000"
-			},
-			"cantidad": "2"
-		}
-		
-	]
-} */
+
 public class Pedido   {
      private String idP;
      private double cantidad;
@@ -44,22 +29,9 @@ public class Pedido   {
         return productos;
     }
 
-    /*public double getsubTotal() {
-        return this.getPrecio() * this.cantidad;
+    public String getIdP() {
+        return idP;
     }
+    
 
-    public double getFactura(){
-        
-        if (getsubTotal()>70000) 
-              return getsubTotal()+(getsubTotal()*iva)+domicilio;
-        else if (getsubTotal()>100000) 
-              return getsubTotal()+(getsubTotal()*iva);
-        else
-        return getsubTotal();
-    }
-
-    public double eliminarFacturaValor(){
-        return getsubTotal()*0.10;
-        
-    }*/
 }
