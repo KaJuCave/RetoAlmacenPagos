@@ -1,4 +1,4 @@
-package com.julianacano.springretoback;
+package com.julianacano.springretoback.modelo;
 
 import java.util.ArrayList;
 
@@ -8,14 +8,18 @@ public class Cliente {
     private String nombre;
     private String apellido;
     private String direccion;
-    private ArrayList<Cliente> clientes;
+    private static ArrayList<Cliente> clientes= new ArrayList<>();
 
     public Cliente (String cedula,String nombre,String apellido,String direccion ){
         this.cedula= cedula;
         this.nombre=nombre;
         this.apellido=apellido;
         this.direccion=direccion;
-        clientes = new ArrayList<>();
+         
+    }
+
+    public Cliente(){
+
     }
     public String getCedula() {
         return cedula;
@@ -48,7 +52,7 @@ public class Cliente {
         this.direccion= direccion;
     }
 
-    public ArrayList<Cliente> agregarClientes(){
+    public static ArrayList<Cliente> agregarClientes(){
 
         clientes.add(new Cliente("12345", "Carlos", "Vega", "Carrera 11 # 14-08"));
         clientes.add(new Cliente("12233", "Ana Maria", "Gonzales", "Calle 11 # 14-08"));
