@@ -58,7 +58,6 @@ public class Factura {
         this.id=UUID.randomUUID().toString();
     }
 
-    
     public void setTotalProduc(double totalProduc){
         this.totalProduc=totalProduc;
         this.totalProduc+=(this.totalProduc*this.iva)+this.domicilio;
